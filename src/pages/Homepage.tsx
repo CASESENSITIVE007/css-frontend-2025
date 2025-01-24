@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Calendar, Users, Briefcase, BookOpen, Code } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import LeetcodeDashboard from "./LeetcodeDashboard";
+import Logo from "@/images/a.png"
 
 const Index = () => {
   const teamMembers = {
@@ -27,7 +28,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-20 md:pb-0 px-4">
+    <div className="min-h-screen pt-20 pb-20 md:pb-0 px-4 flex justify-center items-center   ">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -37,11 +38,21 @@ const Index = () => {
             Together, we learn, create, and grow.
           </p>
         </section>
+       
+
 
         {/* Add Community/Leaderboard section */}
-        <section className="mb-8">
-          <LeetcodeDashboard />
-        </section>
+        <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+          <div className="flex flex-col items-center justify-center order-1 md:order-1 w-full md:w-1/2 md:h-[500px]">
+            <img src={Logo} className="h-96 w-96" alt="Logo" />
+          </div>
+          
+          <section className="w-full md:w-1/2 jus order-1 md:order-2">
+            <div className="h-[500px] overflow-y-auto">
+              <LeetcodeDashboard />
+            </div>
+          </section>
+        </div>
 
         {/* Upcoming Events */}
         <section>
