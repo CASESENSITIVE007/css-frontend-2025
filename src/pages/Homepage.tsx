@@ -75,8 +75,8 @@ const Index = () => {
               </div>
               <CardDescription>Join our latest workshops and meetups</CardDescription>
             </CardHeader>
-            <CardContent className="overflow-x-auto">
-              <div className="flex gap-4 min-w-max">
+            <CardContent className="overflow-x-auto md:overflow-x-auto">
+              <div className="flex flex-col md:flex-row gap-4 md:min-w-max">
                 {[
                   {
                     title: "Web Development Workshop",
@@ -110,7 +110,7 @@ const Index = () => {
                     description: "Industry experts share their experiences"
                   }
                 ].map((event, index) => (
-                  <Card key={index} className="w-[300px] flex-shrink-0">
+                  <Card key={index} className="w-full md:w-[300px] md:flex-shrink-0">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2 text-foreground">{event.title}</h3>
                       <p className="text-sm text-muted-foreground mb-1">{event.date}</p>
@@ -133,12 +133,12 @@ const Index = () => {
               </div>
               <CardDescription>Meet our dedicated teams working on various domains</CardDescription>
             </CardHeader>
-            <CardContent className="overflow-x-auto">
-              <div className="flex gap-4 min-w-max">
+            <CardContent className="overflow-x-auto md:overflow-x-auto">
+              <div className="flex flex-col md:flex-row gap-4 md:min-w-max">
                 {Object.entries(teamMembers).map(([teamName, members], index) => (
                   <Dialog key={index}>
                     <DialogTrigger asChild>
-                      <Card className="cursor-pointer hover:bg-accent transition-colors w-[300px] flex-shrink-0">
+                      <Card className="cursor-pointer hover:bg-accent transition-colors w-full md:w-[300px] md:flex-shrink-0">
                         <CardContent className="pt-6">
                           <h3 className="font-semibold mb-2 text-foreground">{teamName}</h3>
                           <p className="text-sm text-muted-foreground mb-1">{members.length} Members</p>
@@ -208,8 +208,8 @@ const Index = () => {
               </div>
               <CardDescription>Technical insights and experiences shared by our members</CardDescription>
             </CardHeader>
-            <CardContent className="overflow-x-auto">
-              <div className="flex gap-4 min-w-max">
+            <CardContent className="overflow-x-auto md:overflow-x-auto">
+              <div className="flex flex-col md:flex-row gap-4 md:min-w-max">
                 {[
                   {
                     title: "Getting Started with React",
@@ -243,7 +243,7 @@ const Index = () => {
                     date: "February 25, 2024"
                   }
                 ].map((blog, index) => (
-                  <Card key={index} className="w-[300px] flex-shrink-0">
+                  <Card key={index} className="w-full md:w-[300px] md:flex-shrink-0">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2 text-foreground">{blog.title}</h3>
                       <p className="text-sm text-muted-foreground mb-1">By {blog.author}</p>
@@ -266,8 +266,8 @@ const Index = () => {
               </div>
               <CardDescription>Innovative projects developed by our teams</CardDescription>
             </CardHeader>
-            <CardContent className="overflow-x-auto">
-              <div className="flex gap-4 min-w-max">
+            <CardContent className="overflow-x-auto md:overflow-x-auto">
+              <div className="flex flex-col md:flex-row gap-4 md:min-w-max">
                 {[
                   {
                     title: "E-commerce Platform",
@@ -290,7 +290,7 @@ const Index = () => {
                     status: "Beta Testing"
                   }
                 ].map((project, index) => (
-                  <Card key={index} className="w-[300px] flex-shrink-0">
+                  <Card key={index} className="w-full md:w-[300px] md:flex-shrink-0">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2 text-foreground">{project.title}</h3>
                       <p className="text-sm text-muted-foreground mb-1">{project.tech}</p>
